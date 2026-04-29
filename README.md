@@ -412,7 +412,7 @@ git tag
 **Question 4.1:** Run `git push origin main`. Then open the **Actions** tab in
 your fork on GitHub. Did any workflow run trigger? Explain why or why not.
 
-> *Your answer:*
+> *Your answer:* Keine Actions eingerichtet -> kein workflow trigger unabhängig von allem anderen
 
 **Question 4.2:** Run `git tag -v v1.0.0`. What information is shown that
 `git tag` alone does not display? What does the `-v` flag verify?
@@ -560,14 +560,14 @@ git commit -m "ci: render PlantUML schema and publish GitHub Release on tag"
 if you replaced it with `on: push: branches: ['main']`? Would the release
 workflow still make sense? Why or why not?
 
-> *Your answer:*
+> *Your answer:* Der Trigger wäre von allem was mit v getaggt ist zu allem, was in Main getaggt wird also würde es keinen Sinn mehr ergeben, da die Tags komplett ausgehebelt werden
 
 **Question 5.2:** The step `apt-get install plantuml` takes roughly 20–30 seconds
 on every run. In a larger team with many releases per day, this adds up. Name
 one GitHub Actions mechanism that could eliminate this installation time on
 repeated runs.
 
-> *Your answer:*
+> *Your answer:* caching, actions/cache
 
 ---
 
@@ -665,7 +665,8 @@ instead.
 > `schema.svg` from the Release in the same browser window alongside it.
 > Capture both in one screenshot and insert it here.
 >
-> `[insert screenshot]`
+> <img width="585" height="166" alt="image" src="https://github.com/user-attachments/assets/08c81a85-9c1b-4fb4-bc8c-3ed495e10768" />
+
 
 ---
 
