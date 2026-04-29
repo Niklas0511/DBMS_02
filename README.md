@@ -65,7 +65,8 @@ git --version
 > **Screenshot 1:** Take a screenshot of your terminal showing all three
 > successful version checks and insert it here.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`<img width="626" height="536" alt="DBMS2_1" src="https://github.com/user-attachments/assets/e11728ce-4b97-4ae9-a421-e45ee791d36d" />
+
 
 ---
 
@@ -217,19 +218,20 @@ ellipses). PlantUML uses Crow's Foot notation. Describe one concrete difference
 in how an N:M relationship is represented in each notation.
 
 > *Your answer:*
+> Chen Notation macht es als eigene Entität, Crows Foot nur als Linie
 
 **Question 2.2:** What would happen if you wrote `@startuml Library` instead of
 `@startuml` at the top of `schema.puml`? Try it locally (`plantuml -tsvg schema.puml`)
 and observe the output filename. Why would this break the workflow?
 
-> *Your answer:*
+> *Your answer: Der Filename ändert sich und wird dadurch von anderen Programmen nicht als die selbe Datei gesehen
 
 **Question 2.3:** The `Author`–`Book` relationship is N:M. Does your PlantUML
 diagram require you to model the intermediate join table explicitly, or does
 PlantUML abstract it away? At which stage of the design process would the join
 table appear?
 
-> *Your answer:*
+> *Your answer: Im Plantuml verschwindet das, die spätere Datenbank braucht das aber trotzdem
 
 ---
 
@@ -296,7 +298,8 @@ Open `schema.svg` in a browser or SVG viewer.
 > **Screenshot 2:** Take a screenshot of `schema.svg` open in your browser,
 > showing all five entities and all four relationships, and insert it here.
 >
-> `[insert screenshot]`
+> <img width="1198" height="624" alt="image" src="https://github.com/user-attachments/assets/c8c7cb78-794d-4dea-99db-149ff745cb6a" />
+
 
 Once the diagram looks correct, tell Git to ignore the generated artifact.
 The workflow will recreate it on every release:
@@ -324,13 +327,13 @@ git commit -m "chore: ignore generated SVG artifact"
 Name one shell command you could use to check the exit code of the last command
 and verify that the render succeeded, without opening the SVG file.
 
-> *Your answer:*
+> *Your answer:*echo $?
 
 **Question 3.2:** Delete `schema.svg` and run `plantuml -tsvg schema.puml` again.
 Then run `git status`. Is `schema.svg` shown as an untracked file? Explain why
 or why not.
 
-> *Your answer:*
+> *Your answer:*Da es wweiter im gitignore steht, ist es keine Änderung auch wenn die Datei nicht dauerhaft existiert hat
 
 ---
 
@@ -414,7 +417,7 @@ your fork on GitHub. Did any workflow run trigger? Explain why or why not.
 **Question 4.2:** Run `git tag -v v1.0.0`. What information is shown that
 `git tag` alone does not display? What does the `-v` flag verify?
 
-> *Your answer:*
+> *Your answer:*type, tagger, object und Beschreibung
 
 ---
 
