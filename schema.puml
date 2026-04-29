@@ -79,9 +79,9 @@ entity "Loan" as L {
 '   4. Copy    -- is borrowed in --  Loan    (1:0..N)
 '
 ' ============================================================
-Author |{ -- |{ Book : "writes"
-Book || -- |{ Copy : "is available as"
-Member || -- o{ Loan : "places"
-Copy || -- o{ Loan : "is borrowed in"
+Author }|--|{ Book : "writes"
+Book ||--|{ Copy : "is available as"
+Member ||--o{ Loan : "places"
+Copy ||--o{ Loan : "is borrowed in"
 
 @enduml
